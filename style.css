@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #f0f2f7;
+}
+
+/*-----------NAV BAR CSS ---------------*/
+
+.navbar {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 76%;
+  height: 55px;
+  top: 10px;
+  left: 22%;
+  background-color: white;
+  z-index: 2;
+  padding-left: 2rem;
+}
+
+.profile {
+  display: flex;
+  width: 32%;
+  max-width: 200px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 3%;
+}
+
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/*-----------hidden lines to open menu ---------------*/
+.side-toggle {
+  position: fixed;
+  z-index: 2;
+  align-items: center;
+  left: 24%;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  visibility: hidden;
+}
+#toggle {
+  display: none;
+}
+
+/*-----------SIDEBAR CSS ---------------*/
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  left: 0;
+  top: 0;
+  padding: 40px 0 20px 0;
+  color: white;
+  background-color: #3b91f8;
+}
+
+.sidebar-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: all 0.5s ease-out;
+}
+
+.sidebar-menu span {
+  padding: 2px;
+  padding-right: 30px;
+  font-size: 20px;
+  margin-left: 35px;
+ 
+}
+
+.sidebar-menu p{
+    margin-top: 5px;
+}
+.sidebar .logo-details {
+  font-size: 25px;
+  padding: 15px;
+  margin-bottom: 40px;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+}
+
+.sidebar-menu:hover {
+  color: black;
+  background-color: white;
+  width: 80px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+/*-----------hidden lines to open menu ---------------*/
+#toggle:checked ~ .sidebar {
+  width: 70px;
+}
+#toggle:checked ~ .sidebar .sidebar-menu > p {
+  display: none;
+}
+
+/*----- 4 cards grid ----------------*/
+main {
+  min-height: 55%;
+  padding: 6rem 1rem 2rem 1rem;
+  color: black;
+  margin-left: 21%;
+  margin-right: 1%;
+}
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  grid-template-areas: "total1 total2 total3 total4";
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.total1 {
+  grid-area: total1;
+  background-color: #2a6dbe;
+  color: white;
+}
+.total2 {
+  grid-area: total2;
+  background-color: #67ac5b;
+  color: white;
+}
+.total3 {
+  grid-area: total3;
+  background-color: #ee993c;
+  color: white;
+}
+.total4 {
+  grid-area: total4;
+  background-color: #3b91f8;
+  color: white;
+}
+
+.info {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.info-image {
+  font-size: 40px;
+  margin-right: 10px;
+}
+.info-detail h4,
+p {
+  padding-bottom: 10px;
+}
+
+/*-----pictures service catalog ----------------*/
+
+.container1{
+    display: grid;
+    
+    color: white;
+    grid-template-columns: 0.65fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: "Sidebar1 Box1 Box2"
+                         "Sidebar1 Box3 Box3";
+    margin-left: 22%;
+    margin-right: 2%;
+    gap: 10px;
+}
+/* Pic - 1 */
+.sidebar1{
+    grid-area:Sidebar1 ;
+    position: relative;
+    
+}
+.sidebar1 .intro{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    right: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.sidebar1 .intro .button1{
+    padding: 3px;
+    font-size: 10px;
+}
+.sidebar1 img{
+    width: 255px;
+    height: 265px;
+    border-radius: 5px;
+}
+
+/* Pic - 2 */
+.box1{
+    grid-area:Box1 ;
+    position: relative;
+}
+.box1 .intro3{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 125px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    right: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.box1 .intro3 p {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.box1 img{
+    width: 380px;
+    height: 125px;
+    border-radius: 5px;
+}
+
+/* Pic - 3 */
+.box2{
+   
+    grid-area:Box2 ;
+    position: relative;
+
+}
+.box2 .intro4{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 125px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    right: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.box2 img{
+    width: 380px;
+    height: 125px;
+    border-radius: 5px;
+}
+
+/* Pic - 4 */
+.box3{
+    grid-area:Box3 ;
+    position: relative;
+}
+.box3 .intro5{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    right: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.box3 .intro5 .button5{
+    padding: 3px;
+    font-size: 10px;
+}
+
+
+.box3 img{
+    width: 770px;
+    height: 128px;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Responsive Media Query */
+@media (max-width: 1240px) {
+    .sidebar{
+      width: 70px;
+      
+    }
+    .logo-details{
+        width: 70px;
+        height: 50px;
+    }
+    .logo_name{
+        visibility: hidden;
+    }
+    .sidebar-menu p{
+        visibility: hidden;
+    }
+
+    .side-toggle {
+        position: fixed;
+        z-index: 2;
+        align-items: center;
+        left: 3%;
+        top: 8%;
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+        visibility: visible;
+      }
+      #toggle {
+        display: none;
+      }
+      main {
+        min-height: auto;
+        min-width: auto;
+        width: 65%;
+        padding: 6rem 1rem 2rem 1rem;
+        margin-left: 8%;
+        margin-right: 4%;
+        
+      }
+      .navbar {
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        width: 63%;
+        height: 55px;
+        top: 10px;
+        left: 9%;
+        background-color: white;
+        z-index: 2;
+        padding-left: 2rem;
+      }
+      .container1{
+        display: grid;
+        color: white;
+        grid-template-columns: 0.5fr 0.75fr 0.75fr;
+        grid-template-rows: 0.75fr 0.75fr ;
+        grid-template-areas: "Sidebar1 Box1 Box2"
+                             "Sidebar1 Box3 Box3";
+        margin-left: 10%;
+        margin-right: 8%;
+        gap: 10px;
+    }
+
+}
+
+
+
+@media (max-width: 400px) {
+    .sidebar{
+        width: 0px; 
+      }
+    .logo-details, .sidebar-menu{
+        display: none;
+    }
+    .side-toggle {
+        position: fixed;
+        z-index: 2;
+        align-items: center;
+        left: 3%;
+        top: 4%;
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+        visibility: visible;
+      }
+      #toggle {
+        display: none;
+      }
+    .navbar {
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 55px;
+        top: 10px;
+        left: 0%;
+        background-color: white;
+        z-index: 2;
+        padding-left: 2rem;
+      }
+    .navbar h5, h6{
+        display: none;
+    }
+    
+    .profile {
+        display: flex;
+        width: 100%;
+        max-width: 100px;
+        margin-left: 65%;
+        justify-content: space-evenly;
+        align-items: center;
+        
+      }
+      .profile-image {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      
+      .profile-name {
+        font-size: 0.6rem;
+        margin-top: 10px;
+      }
+      .container1{
+        display: none;
+    }
+    main {
+        
+        padding: 6rem 1rem 2rem 1rem;
+        color: black;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+      .dashboard-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        width: 146%;
+        height: 80%;
+        grid-template-areas: "total1" 
+                             "total2"
+                             "total3"
+                             "total4";
+      }
+}
